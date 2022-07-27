@@ -203,6 +203,13 @@ class Package
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private string|null $suspect = null;
+    
+    /**
+     * If set, this is the latest version of this package
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private string|null $latestVersion = null;
 
     private $entityRepository;
     private $router;
@@ -686,6 +693,11 @@ class Package
         }
 
         return null;
+    }
+    
+    public funcion getLatestVersion(): ?string
+    {
+        return $this->latestVersion;
     }
 
     public function setUpdatedAt(DateTimeInterface $updatedAt): void
