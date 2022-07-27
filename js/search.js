@@ -172,6 +172,7 @@ search.addWidget(
                 <p class="metadata">
                     <span class="metadata-block"><i class="glyphicon glyphicon-download"></i> {{ meta.downloads_formatted }}</span>
                     <span class="metadata-block"><i class="glyphicon glyphicon-star"></i> {{ meta.favers_formatted }}</span>
+                    <span class="metadata-block"><i class="glyphicon glyphicon-tag"></i> {{ meta.latest_version }}</span>
                 </p>
             {{/meta}}
         </div>
