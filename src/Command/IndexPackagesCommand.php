@@ -221,6 +221,7 @@ class IndexPackagesCommand extends Command
                 'downloads_formatted' => number_format($downloads['total'], 0, ',', ' '),
                 'favers' => $faversCount,
                 'favers_formatted' => number_format($faversCount, 0, ',', ' '),
+                'latest_version' => $package->getLatestVersion() ?? '-'
             ],
         ];
 
